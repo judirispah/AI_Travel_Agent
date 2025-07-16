@@ -1,0 +1,8 @@
+dotenv
+langgraph
+streamlit
+pydantic
+
+
+
+-e .
