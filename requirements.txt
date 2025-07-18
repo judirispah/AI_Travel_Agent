@@ -6,6 +6,7 @@ ipykernel
 langchain_tavily
 langchain_google_community
 googlemaps
+langchain_groq
 
 
 -e .
