@@ -10,12 +10,14 @@ st.subheader("Plan your trip with real-time data, personalized itinerary, and to
 # Text input
 name = st.text_input("Plan a trip")
 config={"configurable": {"thread_id": "1"}}
+if st.button("Search"):
+    if name:
 
-graph=GraphBuilder(model_provider="deepseek-r1-distill-llama-70b")
+        graph=GraphBuilder(model_provider="deepseek-r1-distill-llama-70b")
 #llm=graph.agent_function(state=name)
-built=graph.build_graph()
-events=built.stream(
+        built=graph.build_graph()
+        events=built.invoke(
     {"messages":[name]},config=config,stream_mode="values"
     )
 
-st.markdown(events)
+    st.markdown(events)
