@@ -1,6 +1,7 @@
 #  Project Architecture Overview
 
 This document describes the architecture of the **AI Travel Agent** project, highlighting the purpose of each major component and folder.
+
 ---
 
 ## 📁 Directory Structure
@@ -130,10 +131,14 @@ AI_Travel_Agent/
 
 ```
 
+```
+
 ## 🧱 Modularity & Reusability of API tools
 
 - Break code into small, focused functions and classes automating the API response and info extraction.
 - Avoid hardcoding values  use config files or .env file.
+
+```
 
 ```
 
@@ -142,7 +147,7 @@ AI_Travel_Agent/
 - All core modules have corresponding test files in the `testing/` folder.
 - Uses  `unittest` for writing and running tests.
 
-
 ```
+
 
 
