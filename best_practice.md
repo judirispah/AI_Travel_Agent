@@ -9,7 +9,6 @@ This document describes the architecture of the **AI Travel Agent** project, hig
 
 ```
 
-```
 AI_Travel_Agent/
 │
 ├── app.py                        # Streamlit app for AI module alone
@@ -66,7 +65,7 @@ AI_Travel_Agent/
 ├── README.md                      # Project overview and instructions
 └── best_practice.md               # Coding 
 
-```
+
 ```
 
 
