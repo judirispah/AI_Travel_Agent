@@ -1,11 +1,11 @@
 #  Project Architecture Overview
 
 This document describes the architecture of the **AI Travel Agent** project, highlighting the purpose of each major component and folder.
-
+---
 
 ## 📁 Directory Structure
-```
 
+---
 AI_Travel_Agent/
 │
 ├── app.py                        # Streamlit app for AI module alone
@@ -64,7 +64,10 @@ AI_Travel_Agent/
 
 ---
 
-## 🧩 Component Roles for AI Module
+---
+
+
+## 🧩Component Roles for AI Module
 
 - **app.py**: Standalone Streamlit app for AI features.
 - **app2.py**: FastAPI backend for React and LLM configuration.
@@ -74,14 +77,12 @@ AI_Travel_Agent/
 - **requirements.txt**: Lists required Python packages.
 
 
-
-
-
 ---
 
 ## 🏗️ Error Handling & Logging
 
 - Use custom exceptions for predictable error management.
+
 - Log errors using the custom logger module in runtime created log files.
 
 ---
@@ -122,7 +123,7 @@ AI_Travel_Agent/
 
 ---
 
-## 💡 Local Packages
+## 💡Local Packages
 
 - Uses `setup.py` to manage  Python project as a package.
 - pip install -r requirments.txt installs this package installs the local package in editable mode by including the line -e . in requirements.txt.
