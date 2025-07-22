@@ -8,6 +8,8 @@ This document describes the architecture of the **AI Travel Agent** project, hig
 ## 📁 Directory Structure
 
 ---
+
+---
 AI_Travel_Agent/
 │
 ├── app.py                        # Streamlit app for AI module alone
@@ -130,18 +132,17 @@ AI_Travel_Agent/
 - Uses `setup.py` to manage  Python project as a package.
 - pip install -r requirments.txt installs this package installs the local package in editable mode by including the line -e . in requirements.txt.
 
-```
 
-```
+
+---
 
 ## 🧱 Modularity & Reusability of API tools
 
 - Break code into small, focused functions and classes automating the API response and info extraction.
 - Avoid hardcoding values  use config files or .env file.
 
-```
 
-```
+---
 
 ## 🧪 Testing
 
