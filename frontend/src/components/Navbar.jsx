@@ -1,13 +1,30 @@
-export default function Nav({ setActiveTab }) {
+import React from "react";
+import { Navbar as BootstrapNavbar, Nav, Container } from "react-bootstrap";
+import './Navbar.css'; // For custom styles
+
+export default function NavigationBar({ setActiveTab }) {
   return (
-    <nav className="flex justify-between items-center px-6 py-4 bg-white shadow-md">
-      <h1 className="text-2xl font-bold text-indigo-600 cursor-pointer" onClick={() => setActiveTab("home")}>TripAI ✈️</h1>
-      <ul className="flex space-x-6 text-gray-600 font-medium">
-        <li onClick={() => setActiveTab("itinerary")} className="hover:text-indigo-500 cursor-pointer">Itinerary</li>
-        <li onClick={() => setActiveTab("flights")} className="hover:text-indigo-500 cursor-pointer">Flights</li>
-        <li onClick={() => setActiveTab("hotel")} className="hover:text-indigo-500 cursor-pointer">Hotels</li>
-        <li onClick={() => setActiveTab("map")} className="hover:text-indigo-500 cursor-pointer">Map View</li>
-      </ul>
-    </nav>
+    <BootstrapNavbar expand="lg" className="custom-navbar">
+      <Container>
+        <BootstrapNavbar.Brand
+          href="#"
+          className="navbar-brand-text"
+          onClick={() => setActiveTab("home")}
+        >
+          TripAI ✈️
+        </BootstrapNavbar.Brand>
+        <BootstrapNavbar.Toggle aria-controls="basic-navbar-nav" />
+        <BootstrapNavbar.Collapse id="basic-navbar-nav">
+          <Nav className="ms-auto nav-links">
+            <Nav.Link onClick={() => setActiveTab("home")}>Home</Nav.Link>
+           <Nav.Link onClick={() => setActiveTab("itinerary")}> AI Itinerary</Nav.Link>
+            <Nav.Link onClick={() => setActiveTab("flights")}>Flights</Nav.Link>
+            <Nav.Link onClick={() => setActiveTab("contact")}>Contact Us</Nav.Link>
+            <Nav.Link onClick={() => setActiveTab("map")}>Map View</Nav.Link>
+            
+          </Nav>
+        </BootstrapNavbar.Collapse>
+      </Container>
+    </BootstrapNavbar>
   );
 }
