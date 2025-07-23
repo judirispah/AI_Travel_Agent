@@ -20,4 +20,4 @@ if st.button("Search"):
     {"messages":[name]},config=config,stream_mode="values"
     )
 
-    st.markdown(events)
+    st.write(events['messages'][1].content)

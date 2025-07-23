@@ -10,7 +10,7 @@ from prompt_engineering.custom_prompt import SYSTEM_PROMPT
 from langgraph.graph import StateGraph, MessagesState, END, START
 from langgraph.prebuilt import ToolNode, tools_condition
 
-from langgraph.checkpoint.memory import MemorySaver
+#from langgraph.checkpoint.memory import MemorySaver
 
 import os
 
@@ -46,7 +46,7 @@ class GraphBuilder():
             return {"messages": [response]}
         
     def build_graph(self):
-            memory=MemorySaver()
+            #memory=MemorySaver()
             graph_builder=StateGraph(MessagesState)
             graph_builder.add_node("agent", self.agent_function)
             graph_builder.add_node("tools", ToolNode(tools=self.tools))
@@ -54,7 +54,7 @@ class GraphBuilder():
             graph_builder.add_conditional_edges("agent",tools_condition)
             graph_builder.add_edge("tools","agent")
             graph_builder.add_edge("agent",END)
-            self.graph = graph_builder.compile(checkpointer=memory)
+            self.graph = graph_builder.compile()
             return self.graph
 
 #config={"configurable": {"thread_id": "1"}}
